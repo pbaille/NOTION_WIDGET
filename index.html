@@ -27,7 +27,8 @@
                 headers: myHeaders,
                 mode: 'cors',
                 cache: 'default',
-                body: JSON.stringify(payload)
+                body: JSON.stringify(payload),
+                crossDomain: true
             };
 
             var myRequest = new Request("https://api.notion.com/v1/blocks/51904057270c4ba49ddd2805dcf3d2a0/children", myInit);

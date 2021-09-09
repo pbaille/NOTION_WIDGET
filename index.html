@@ -13,9 +13,6 @@
         const id = url.substring(url.length - 32, url.length)
         
         const reqUrl = "https://aqueous-caverns-81645.herokuapp.com/append-block/" + id
-        
-        alert(id)
-        alert(reqUrl)
             
         var myHeaders = new Headers({
                     "Content-Type": "application/json",
@@ -36,7 +33,7 @@
 
             fetch(myRequest,myInit)
                 .then(function(response) {
-                    console.log(response.status, id ,reqUrl);
+                    console.log(response.status, url);
             });
 
            // document.getElementById("demo").innerHTML = "Hello World";

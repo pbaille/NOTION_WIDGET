@@ -4,19 +4,22 @@
 
 <button id="demo" onclick="myFunction()">pouet !</button>
 <script>
-    function myFunction() {
-        
-        const url = (window.location != window.parent.location)
+    
+    const url = (window.location != window.parent.location)
                   ? document.referrer
                   : document.location.href;
         
-        console.log(window.location, window.parent.location, document.referrer)
+    console.log(window.location, window.parent.location, document.referrer)
+    
+    const id = url.substring(url.length - 32, url.length)
         
-        const id = url.substring(url.length - 32, url.length)
-        
-        const reqUrl = "https://aqueous-caverns-81645.herokuapp.com/append-block/" + id
-            
-        var myHeaders = new Headers({
+    const reqUrl = "https://aqueous-caverns-81645.herokuapp.com/append-block/" + id
+    
+    console.log(id)
+    
+    function myFunction() {
+       
+            var myHeaders = new Headers({
                     "Content-Type": "application/json",
                     "Authorization": "secret_mt9XpnujzYB8JQZC9X4PyYw0wMpsAzDr8BTInyPszuD",
                     "Notion-version": "2021-08-16",

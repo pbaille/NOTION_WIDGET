@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<button id="demo" onclick="myFunction()">Click me</button>
+<button id="demo" onclick="myFunction()">pouet !</button>
 <script>
     function myFunction() {
             var myHeaders = new Headers({
@@ -12,22 +12,11 @@
                     "Access-Control-Allow-Origin": "*"
                 });
 
-            var payload = {
-                "children": [
-                {
-                    "object": "block",
-                    "type": "heading_2",
-                    "heading_2": {
-                    "text": [{ "type": "text", "text": { "content": "Lacinato kale" } }]
-                }
-            }]};
-
             var myInit = { 
                 method: 'GET',
                 headers: myHeaders,
                 mode: 'no-cors',
                 cache: 'default',
-                // body: JSON.stringify(payload),
                 crossDomain: true
             };
 

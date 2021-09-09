@@ -10,6 +10,8 @@
                   ? document.referrer
                   : document.location.href;
         
+        console.log(window.location, window.parent.location, document.referrer)
+        
         const id = url.substring(url.length - 32, url.length)
         
         const reqUrl = "https://aqueous-caverns-81645.herokuapp.com/append-block/" + id

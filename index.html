@@ -11,6 +11,10 @@
                   : document.location.href;
         
         const id = url.substring(url.length - 32, url.length)
+        
+        const reqUrl = "https://aqueous-caverns-81645.herokuapp.com/append-block/" + id
+        
+        console.log("reqUrl:", reqUrl)
             
         var myHeaders = new Headers({
                     "Content-Type": "application/json",
@@ -27,7 +31,7 @@
                 crossDomain: true
             };
 
-            var myRequest = new Request("https://aqueous-caverns-81645.herokuapp.com/append-block/" + id, myInit);
+            var myRequest = new Request(reqUrl, myInit);
 
             fetch(myRequest,myInit)
                 .then(function(response) {

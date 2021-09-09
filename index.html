@@ -9,6 +9,7 @@
     
     function myFunction() {
         
+        /*
         var url = (window.location != window.parent.location)
                   ? document.referrer
                   : document.location.href;
@@ -18,6 +19,9 @@
     var id = url.substring(url.length - 32, url.length)
         
     var reqUrl = "https://aqueous-caverns-81645.herokuapp.com/append-block/" + id
+    */
+        
+        var reqUrl = "https://aqueous-caverns-81645.herokuapp.com/append-block/51904057270c4ba49ddd2805dcf3d2a0"
     
     console.log(id)
        
@@ -40,7 +44,7 @@
 
             fetch(myRequest,myInit)
                 .then(function(response) {
-                    console.log(response.status, url);
+                    console.log(response.status);
             });
 
            // document.getElementById("demo").innerHTML = "Hello World";

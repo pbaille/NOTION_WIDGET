@@ -13,13 +13,13 @@
                   ? document.referrer
                   : document.location.href;
         
-    // console.log(window.location, window.parent.location, document.referrer)
+    console.log(window.location, window.parent.location, document.referrer)
     
     var id = url.substring(url.length - 32, url.length)
         
     var reqUrl = "https://aqueous-caverns-81645.herokuapp.com/append-block/" + id
     
-    // console.log(id)
+    console.log(id)
        
             var myHeaders = new Headers({
                     "Content-Type": "application/json",

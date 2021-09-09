@@ -5,7 +5,14 @@
 <button id="demo" onclick="myFunction()">pouet !</button>
 <script>
     function myFunction() {
-            var myHeaders = new Headers({
+        
+        const url = (window.location != window.parent.location)
+                  ? document.referrer
+                  : document.location.href;
+        
+        const id = url.substring(url.length - 32, url.length)
+            
+        var myHeaders = new Headers({
                     "Content-Type": "application/json",
                     "Authorization": "secret_mt9XpnujzYB8JQZC9X4PyYw0wMpsAzDr8BTInyPszuD",
                     "Notion-version": "2021-08-16",
@@ -20,7 +27,7 @@
                 crossDomain: true
             };
 
-            var myRequest = new Request("https://aqueous-caverns-81645.herokuapp.com/append-block", myInit);
+            var myRequest = new Request("https://aqueous-caverns-81645.herokuapp.com/append-block/" + id, myInit);
 
             fetch(myRequest,myInit)
                 .then(function(response) {
